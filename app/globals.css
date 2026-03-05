@@ -1,30 +1,13 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Custom CSS Variables for Theme */
-@theme {
+:root {
   --color-primary: #22c55e;
   --color-primary-dark: #16a34a;
   --color-primary-light: #86efac;
   --color-secondary: #ffffff;
-  
-  --animate-fade-in: fadeIn 600ms ease-out;
-  --animate-fade-in-up: fadeInUp 600ms ease-out;
-}
-
-@keyframes fadeIn {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
-}
-
-@keyframes fadeInUp {
-  0% { 
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  100% { 
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 /* Base Styles */
@@ -57,4 +40,21 @@ body {
 *:focus-visible {
   outline: 2px solid var(--color-primary);
   outline-offset: 2px;
+}
+
+/* Custom Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  0% { 
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% { 
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
